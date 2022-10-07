@@ -14,4 +14,4 @@ RewriteCond %{REQUEST_fileNAME} !-f
 
 RewriteRule (.*) /$1.html
 
-ErrorDocument 404 https://www.google.com.ua/?hl=ru
+ErrorDocument 404 404.html
