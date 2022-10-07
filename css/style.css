@@ -203,6 +203,9 @@ hr {
     overflow: hidden;
     position: relative;
   	border-radius: 0 0 250px 280px;  /* можно сохранить дугу для элементов разнообразных размеров, если задать очень большое значение для двух углов */
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .intro__photo-bg{
     position: absolute;
@@ -214,13 +217,11 @@ hr {
 	transform: rotate(180deg)	
 }
 .intro__photo-img{
-    width: 100%;
-    transform: translateY(100%);
+    width: 70%;
     transition: 0.5s;
-	
+	transform: translateY(100%);
 }
 .intro__photo-img.show{
-    
     transform: translateY(0);
 }
 .about__inner {
@@ -365,7 +366,7 @@ hr {
 .work__tab {
 	position: relative;
 	margin: 10px;
-	padding: 20px;
+	padding: 15px;
 	font-weight: 800;
 	border-radius: 25px;
 	font-weight: 900;
@@ -906,6 +907,9 @@ input[type="submit"]:hover{
 		margin-bottom: 10px;
 		overflow: visible;
 	}
+	.intro__photo-img{
+		width: 70%;
+	}
 	.title {
 		font-size: 45px;
 	}
@@ -957,7 +961,6 @@ input[type="submit"]:hover{
 	.header {
 		position: fixed;
 		top: 0;
-		box-shadow: 0px 0px 10px #9b9b9b7a;
 	}
 	.header__list li {
 		padding: 10px 10px;
@@ -1138,6 +1141,16 @@ input[type="submit"]:hover{
 	.title{
 		font-size: 32px;
 	}
+	.intro__photo-bg{
+		bottom: 3px;
+		width: 107%;
+		height: 80%;
+		transform: rotate(180deg)	
+	}
+	.intro__photo-img{
+		max-width: 339px;
+		width: 85%;
+	}
 }
 
 @media (max-width: 340px) {
@@ -1166,6 +1179,16 @@ input[type="submit"]:hover{
 	.freelance__logo{
 		width: 40px;
 		height: 40px;
+	}
+
+	.intro__photo-bg{
+		bottom: 3px;
+		width: 150%;
+		height: 80%;
+		transform: rotate(180deg)	
+	}
+	.intro__photo-img{
+		width: 120%;
 	}
 }
 
