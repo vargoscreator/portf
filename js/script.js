@@ -110,7 +110,7 @@ function onEntry(entry) {
 
 
 let options = {
-	threshold: [0.5]
+	threshold: [0.2]
 };
 let observer = new IntersectionObserver(onEntry, options);
 let elements = document.querySelectorAll('.about__item');
@@ -123,17 +123,6 @@ for (let elm of elements) {
 }
 
 
-var header = $(".header");
-var scrollChange = 70;
-$(window).scroll(function() {
-    var scroll = $(window).scrollTop();
-    if (scroll >= scrollChange) {
-      $(".header").addClass('line');
-    } 
-    else {
-      $(".header").removeClass("line");
-    }
-});
 
 
 if ( jQuery(window).width() > 750){
@@ -147,7 +136,7 @@ if ( jQuery(window).width() > 750){
 			$(".about").addClass('active');
 		}
 	
-	// иначе скрыть кнопку scrollup
+		// иначе скрыть кнопку scrollup
 		if ($(this).scrollTop() > 1900) {
 			$(".header__link").removeClass("active");
 			$(".work").addClass("active");
@@ -158,7 +147,7 @@ if ( jQuery(window).width() > 750){
 			$(".cont").addClass("active");
 		}
 
-	// иначе скрыть кнопку scrollup
+		// иначе скрыть кнопку scrollup
 		if ($(this).scrollTop() < 800) {
 			$(".header__link").removeClass("active");
 			$(".main").addClass("active");
@@ -166,11 +155,11 @@ if ( jQuery(window).width() > 750){
 	});
 }
 
-$.ajax({
-    url: 'https://docs.google.com/forms/d/e/1FAIpQLSf3NEY9ImMuL7NcE7B1F_uwE2MhsYcIB0dqNfYHoDqioaaEIA/formResponse?entry.325029618=1',
-    method: 'post',
-    /* dataType: 'json',*/
-    success: function(data){
-
-}
+$(window).scroll(function() {
+	if ($(this).scrollTop() > 70) {
+		$(".header").addClass('line');
+	}
+	else{
+		$(".header").removeClass("line");
+	}
 });

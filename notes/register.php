@@ -50,7 +50,7 @@
                 </div>                                  
                 <div class="message__error">
                     <?php
-                    if($_SESSION['message']){
+                    if(isset($_SESSION['message'])){
                         echo '<p class="message"> ' . $_SESSION['message'] . ' </p>';
                     }
                     unset($_SESSION['message']);
